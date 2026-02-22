@@ -1,0 +1,14 @@
+<div class="container my-4">
+  <h1>Posts con Likes y Dislikes</h1>
+  <p class="lead">Total de Likes: {{ totalLikes() }}</p>
+  <p class="lead">Total de Dislikes: {{ totalDislikes() }}</p>
+  <hr />
+
+  <div class="row">
+    @for (p of posts(); track p.id) {
+      <div class="col-12 col-md-6 col-lg-4">
+        <app-post-card [post]="p" />
+      </div>
+    }
+  </div>
+</div>
